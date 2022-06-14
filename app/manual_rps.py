@@ -1,10 +1,12 @@
 import random
 
+# Convienice constants to use to reduce spelling errors
 __ROCK = "Rock"
 __PAPER = "Paper"
 __SCISSORS = "Scissors"
 __NOTHING = "Nothing"
 
+# Used to correct inputs
 __POSSIBLE_INPUTS = {
     "Rock": __ROCK, 
     "rock": __ROCK,
@@ -28,10 +30,12 @@ __POSSIBLE_INPUTS = {
     "": __NOTHING
     }
 
+# Used to inform user of the outcome, these are appended to the full message
 __VICTORY_MESSAGE = "and you have won!"
 __DEFEAT_MESSAGE = "and you have lost!"
 __DRAW_MESSAGE = "and it's a draw!"
 
+# Convienience dictionary to get the message appendix by using (user_choice, computer_choice) tuple
 __RESOLUTION = {
     (__ROCK, __ROCK): __DRAW_MESSAGE,
     (__ROCK, __PAPER): __DEFEAT_MESSAGE,
@@ -45,9 +49,15 @@ __RESOLUTION = {
 }
 
 def get_computer_choice() -> str:
+    """
+    Randomly pick between "Rock", "Paper" or "Scissors"
+    """
     return random.choice([__ROCK, __PAPER, __SCISSORS])
 
 def get_user_choice():
+    """
+    Prompts the user with an input message, will shutdown the app if "Nothing" is given
+    """
     while True:
         user_input = input("Please pick between Rock, Paper or Scissors, (Nothing to quit): ")
 
@@ -57,6 +67,9 @@ def get_user_choice():
             print(f"'{user_input}' is not a valid input")
 
 def get_winner(user_choice: str, computer_choice: str):
+    """
+    Print a message informing the user if they have won
+    """
     def message(resolution: str):
         print(f"You have chosen {user_choice} against {computer_choice}, {resolution}")
 
@@ -67,6 +80,9 @@ def get_winner(user_choice: str, computer_choice: str):
         message(__RESOLUTION[(user_choice, computer_choice)])
 
 def play():
+    """
+    Play the game in infinite loop, user can use "Nothing" input to stop
+    """
     user_choice = get_user_choice()
     computer_choice = get_computer_choice()
     get_winner(user_choice, computer_choice)
