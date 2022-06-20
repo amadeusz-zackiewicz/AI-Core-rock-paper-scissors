@@ -1,6 +1,6 @@
-from app.manual_rps import manual_rps
+from app.manual_rps import ManualRPS
 
 if __name__ == "__main__":
-    g = manual_rps()
+    g = ManualRPS()
     while True:
         g.play()

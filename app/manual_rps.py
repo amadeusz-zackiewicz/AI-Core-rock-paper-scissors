@@ -1,7 +1,7 @@
-from app.shared.game import game
-from app.shared.constants import constants as const
+from app.shared.game import Game
+from app.shared.constants import Constants as Const
 
-class manual_rps(game):
+class ManualRPS(Game):
 
     def get_user_choice(self):
         """
@@ -10,8 +10,8 @@ class manual_rps(game):
         while True:
             user_input = input("Please pick between Rock, Paper or Scissors: ")
 
-            if user_input in const.POSSIBLE_INPUTS:
-                return const.POSSIBLE_INPUTS[user_input]
+            if user_input in Const.POSSIBLE_INPUTS:
+                return Const.POSSIBLE_INPUTS[user_input]
             else:
                 print(f"'{user_input}' is not a valid input")
 
@@ -37,7 +37,7 @@ class manual_rps(game):
 
 if __name__ == "__main__":
     
-    g = manual_rps()
+    g = ManualRPS()
 
     while True:
         g.play()

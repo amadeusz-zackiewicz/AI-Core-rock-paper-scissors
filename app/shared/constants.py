@@ -1,4 +1,4 @@
-class constants:
+class Constants:
     ROCK = "Rock"
     PAPER = "Paper"
     SCISSORS = "Scissors"

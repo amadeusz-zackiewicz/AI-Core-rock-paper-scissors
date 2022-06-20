@@ -1,11 +1,11 @@
 # Convienice constants to use to reduce spelling errors
 from math import ceil
-from .constants import constants as const
+from .constants import Constants as Const
 import random
 
 YOLO = "YOLO"
 
-class game:
+class Game:
 
     def __init__(self, best_of = 5):
         self.best_of = best_of
@@ -19,10 +19,10 @@ class game:
         def construct_message(appendix: str):
             return 
 
-        resolution = const.RESOLUTION[(user_choice, computer_choice)]
-        if resolution[0] == const.RESOLUTION_USER_WIN:
+        resolution = Const.RESOLUTION[(user_choice, computer_choice)]
+        if resolution[0] == Const.RESOLUTION_USER_WIN:
             self.user_score += 1
-        elif resolution[0] == const.RESOLUTION_USER_LOST:
+        elif resolution[0] == Const.RESOLUTION_USER_LOST:
             self.computer_score += 1
 
         return f"You have chosen {user_choice} against {computer_choice}, {resolution[1]}"
@@ -32,7 +32,7 @@ class game:
         """
         Randomly pick between "Rock", "Paper" or "Scissors"
         """
-        return random.choice([const.ROCK, const.PAPER, const.SCISSORS])
+        return random.choice([Const.ROCK, Const.PAPER, Const.SCISSORS])
 
     def get_user_choice(self):
         pass
