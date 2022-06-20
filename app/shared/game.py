@@ -37,5 +37,8 @@ class Game:
     def get_user_choice(self):
         pass
 
-    def play(self):
+    def play(self) -> bool:
+        pass
+
+    def quit(self):
         pass

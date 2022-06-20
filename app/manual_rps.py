@@ -30,14 +30,9 @@ class ManualRPS(Game):
 
         if self.user_score == self.max_score:
             print("Well done! You have won!")
-            quit()
+            return False
         if self.computer_score == self.max_score:
             print("Sorry, it looks like you lost")
-            quit()
+            return False
 
-if __name__ == "__main__":
-    
-    g = ManualRPS()
-
-    while True:
-        g.play()
+        return True
