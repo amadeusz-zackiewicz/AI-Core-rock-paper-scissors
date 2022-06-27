@@ -14,9 +14,6 @@ class Game:
 
 
     def get_winner(self, user_choice: str, computer_choice: str):
-        def construct_message(appendix: str):
-            return 
-
         resolution = Const.RESOLUTION[(user_choice, computer_choice)]
         if resolution[0] == Const.RESOLUTION_USER_WIN:
             self.user_score += 1
