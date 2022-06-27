@@ -1,7 +1,7 @@
 # What is this project?
 This project is a simple rock paper scissors game that can be played by using hand gestures via camera. I'm using OpenCV to detect user gestures and interact with the machine. 
 
-The goal of the is to score 3 points before the computer does. 
+The goal of the game is to score 3 points before the computer does. 
 
 # Milestone 1
 I have created a simple model containing 4 classes; rock, paper, scissors and nothing. This model will be used to detect user gestures and play the game.
