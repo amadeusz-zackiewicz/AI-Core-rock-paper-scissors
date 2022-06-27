@@ -3,8 +3,6 @@ from math import ceil
 from .constants import Constants as Const
 import random
 
-YOLO = "YOLO"
-
 class Game:
 
     def __init__(self, best_of = 5):
